@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qclaw Landing Template - 现代化产品落地页模板</title>
+  
+  <!--
+    ====== 图片文件配置 ======
+    将以下文件放在 images/ 文件夹中：
+      images/logo.png         — Logo 图标
+      images/logo-text.png    — 文字版 logo
+      images/tencent-logo.png — 品牌图标
+      images/qrcode-beta.png  — 二维码图片
+  -->
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Custom Cursor (PC only) -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  
+  <!-- Background Effects -->
+  <div class="grid-bg"></div>
+  <div class="float-orb orb-1"></div>
+  <div class="float-orb orb-2"></div>
+  <div class="float-orb orb-3"></div>
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">
+      <img src="images/logo.png" alt="Logo" class="nav-logo-icon">
+      <img src="images/logo-text.png" alt="Logo Text" class="nav-logo-text">
+    </a>
+    <div class="nav-links">
+      <a href="#features">功能优势</a>
+      <a href="#how">快速上手</a>
+      <a href="#demos">使用场景</a>
+      <a href="#testimonials">用户好评</a>
+      <div class="nav-download-wrap">
+        <span class="nav-cta">立即下载</span>
+        <div class="nav-dropdown">
+          <a href="#"><i class="fa-brands fa-apple"></i> 下载 macOS 版</a>
+          <a href="#"><i class="fa-brands fa-windows"></i> 下载 Windows 版</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-glow"></div>
+    <div class="hero-badge">
+      <img src="images/tencent-logo.png" alt="Brand" class="tencent-logo">
+      腾讯电脑管家官方出品
+    </div>
+    <img src="images/logo.png" alt="Logo" class="hero-logo">
+    <img src="images/logo-text.png" alt="Logo Text" class="hero-text-logo">
+    <p class="hero-slogan">随时随地，微信一下，Qclaw 帮你搞定一切</p>
+    <div class="hero-free-row">
+      <div class="hero-free-tag">
+        <i class="fa-solid fa-gift"></i>内测中，限时免费，承包你的 token
+      </div>
+    </div>
+    <div class="hero-buttons" id="download">
+      <a href="#" class="btn-download btn-mac">
+        <i class="fa-brands fa-apple" style="font-size:18px;"></i> 下载 macOS 版
+      </a>
+      <a href="#" class="btn-download btn-win">
+        <i class="fa-brands fa-windows" style="font-size:18px;"></i> 下载 Windows 版
+      </a>
+      <div class="qr-trigger">
+        <i class="fa-brands fa-weixin" style="font-size:18px;color:#07C160;"></i> 加入交流群
+        <div class="qr-popup">
+          <img src="images/qrcode-beta.png" alt="QR Code">
+          <p>微信扫码加入交流群</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section - 5 Cards -->
+  <section class="features-strip" id="features">
+    <div class="feature-card">
+      <div class="feature-icon-wrap"><i class="fa-solid fa-bolt-lightning"></i></div>
+      <h3>自动部署，打开即用</h3>
+      <p>支持 Mac & Windows，内置 Kimi-2.5 模型，支持切换</p>
+      <span class="feature-tag">开箱即用</span>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon-wrap"><i class="fa-brands fa-weixin" style="color:#07C160;"></i></div>
+      <h3>微信直接对话，远程操控</h3>
+      <p>直接关联微信，零配置，随时随地远程让 AI 干活</p>
+      <span class="feature-tag">微信直联</span>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon-wrap"><i class="fa-solid fa-puzzle-piece"></i></div>
+      <h3>5000+ Skills 生态</h3>
+      <p>ClawHub、GitHub 等丰富生态，Skills 随取随用</p>
+      <span class="feature-tag">丰富生态</span>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon-wrap"><span style="font-size:22px;">🦞</span></div>
+      <h3>持续记忆，你的专属龙虾</h3>
+      <p>记住偏好和上下文，持续成长，最懂你的 AI</p>
+      <span class="feature-tag">懂你所想</span>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon-wrap"><i class="fa-solid fa-shield-halved" style="color:#07C160;"></i></div>
+      <h3>本地部署，数据更安全</h3>
+      <p>所有数据留在本地，不经云端，隐私零泄漏</p>
+      <span class="feature-tag">安全可靠</span>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-section" id="how">
+    <div class="section-header reveal">
+      <div class="section-label">
+        <span class="line"></span>HOW IT WORKS<span class="line"></span>
+      </div>
+      <h2>三步上手</h2>
+      <p>从下载到开始干活，只需 3 分钟</p>
+    </div>
+    <div class="steps-row reveal">
+      <div class="step-item">
+        <a href="#home">
+          <div class="step-icon-wrap">
+            <div class="step-num">1</div>📥
+          </div>
+          <h3>下载安装</h3>
+          <p>支持 Mac & Windows<br>一键安装，无需配置环境</p>
+        </a>
+      </div>
+      <div class="step-connector">
+        <svg width="40" height="20" viewBox="0 0 40 20" fill="none">
+          <path d="M0 10h32m0 0l-6-6m6 6l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </div>
+      <div class="step-item">
+        <div class="step-icon-wrap">
+          <div class="step-num">2</div>📱
+        </div>
+        <h3>扫码绑定微信</h3>
+        <p>打开 Qclaw 扫码关联微信<br>30 秒完成绑定</p>
+      </div>
+      <div class="step-connector">
+        <svg width="40" height="20" viewBox="0 0 40 20" fill="none">
+          <path d="M0 10h32m0 0l-6-6m6 6l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </div>
+      <div class="step-item">
+        <div class="step-icon-wrap">
+          <div class="step-num">3</div>🚀
+        </div>
+        <h3>微信或电脑发指令，开干</h3>
+        <p>通过微信或电脑发消息<br>Qclaw 立刻帮你执行任务</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demos Section -->
+  <section class="demos" id="demos">
+    <div class="section-header reveal">
+      <div class="section-label">
+        <span class="line"></span>USE CASES<span class="line"></span>
+      </div>
+      <h2>真实场景，即刻体验</h2>
+      <p>从日常提醒到自动化开发，Qclaw 帮你解锁无限可能</p>
+    </div>
+    <div class="demos-grid">
+      <!-- Demo Card 1 -->
+      <div class="demo-card reveal">
+        <div class="demo-card-image">
+          <div class="demo-visual scene-remote">
+            <div class="hex-pattern"></div>
+            <i class="demo-scene-icon fa-solid fa-desktop"></i>
+            <div class="demo-mockup">
+              <div class="chat-bubble user">
+                <div class="wechat-tag"><i class="fa-brands fa-weixin"></i> 微信</div>
+                帮我打开桌面的"Q3报告.xlsx"，把第3列数据求和
+              </div>
+              <div class="chat-bubble bot">
+                📂 已打开文件<br>✅ Q3总销售额为 ¥2,847,600，已保存！<span class="typing-cursor"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="demo-card-content">
+          <span class="demo-tag">💻 远程操控</span>
+          <h3>远程操作电脑文件/网页</h3>
+          <p>不带电脑也能随时改文档、查数据、处理工作</p>
+        </div>
+      </div>
+      
+      <!-- Demo Card 2 -->
+      <div class="demo-card reveal">
+        <div class="demo-card-image">
+          <div class="demo-visual scene-social">
+            <div class="hex-pattern"></div>
+            <i class="demo-scene-icon fa-solid fa-share-nodes"></i>
+            <div class="demo-mockup">
+              <div class="chat-bubble user">
+                <div class="wechat-tag"><i class="fa-brands fa-weixin"></i> 微信</div>
+                帮我在小红书发一条 AI 效率笔记，自动互动涨粉
+              </div>
+              <div class="chat-bubble bot">
+                📝 笔记已生成 & 发布！<br>🤖 已开启自动互动，今日新增 127 粉丝 🚀
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="demo-card-content">
+          <span class="demo-tag">📱 社媒运营</span>
+          <h3>社媒自动运营涨粉</h3>
+          <p>不用团队自动互动发帖，轻松涨粉</p>
+        </div>
+      </div>
+      
+      <!-- Demo Card 3 -->
+      <div class="demo-card reveal">
+        <div class="demo-card-image">
+          <div class="demo-visual scene-github">
+            <div class="hex-pattern"></div>
+            <i class="demo-scene-icon fa-brands fa-github"></i>
+            <div class="demo-mockup">
+              <div class="chat-bubble user">
+                <div class="wechat-tag"><i class="fa-brands fa-weixin"></i> 微信</div>
+                帮我创建一个 Chrome 插件项目，自动提交到 GitHub
+              </div>
+              <div class="chat-bubble bot">
+                🛠 项目已创建：qclaw-chrome-ext<br>📦 已 push 到 GitHub，自动生成 README<br>⭐ 目标：冲击 1000 Stars！
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="demo-card-content">
+          <span class="demo-tag">🚀 自动开发</span>
+          <h3>GitHub 项目自动开发</h3>
+          <p>你出创意，我来实现，自动建库冲千星</p>
+        </div>
+      </div>
+      
+      <!-- Demo Card 4 -->
+      <div class="demo-card reveal">
+        <div class="demo-card-image">
+          <div class="demo-visual scene-paper">
+            <div class="hex-pattern"></div>
+            <i class="demo-scene-icon fa-solid fa-graduation-cap"></i>
+            <div class="demo-mockup">
+              <div class="chat-bubble user">
+                <div class="wechat-tag"><i class="fa-brands fa-weixin"></i> 微信</div>
+                搜近3年 LLM Agent 综述论文，整理成文献综述
+              </div>
+              <div class="chat-bubble bot">
+                🔍 已检索到 47 篇相关论文<br>📋 已筛选 Top 20 高引论文<br>📝 综述草稿已完成，引用格式：APA<br>✅ 已导出 PDF & LaTeX
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="demo-card-content">
+          <span class="demo-tag">📚 学术研究</span>
+          <h3>学术论文自动整理</h3>
+          <p>自动找文献、整理引用、写综述、提升发文效率</p>
+        </div>
+      </div>
+      
+      <!-- Demo Card 5 - Full Width -->
+      <div class="demo-card full-width reveal">
+        <div class="demo-card-image">
+          <div class="demo-visual scene-weather">
+            <div class="hex-pattern"></div>
+            <i class="demo-scene-icon fa-solid fa-sun"></i>
+            <div class="demo-mockup horizontal">
+              <div class="chat-bubble user">
+                <div class="wechat-tag"><i class="fa-brands fa-weixin"></i> 微信</div>
+                帮我设置每天早上 8 点推送天气
+              </div>
+              <div class="chat-bubble bot">
+                ✅ 已设置！明早 8 点准时播报<br>🌤 明天晴，23°C，建议穿薄外套~<br>🌧 后天有雨，记得带伞哦
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="demo-card-content">
+          <span class="demo-tag">☀️ 智能提醒</span>
+          <h3>每日天气定时提醒</h3>
+          <p>自动推送天气状况，给出穿衣 & 出行建议</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="section-header reveal">
+      <div class="section-label">
+        <span class="line"></span>TESTIMONIALS<span class="line"></span>
+      </div>
+      <h2>用户好评</h2>
+      <p>来自真实用户的声音</p>
+    </div>
+    <div class="testimonials-track-wrap">
+      <div class="testimonials-track" id="testimonialsTrack">
+        <!-- Testimonials will be duplicated by JS for infinite scroll -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"出差在外用微信让 Qclaw 帮我改 PPT、查数据，简直是远程办公神器。再也不用背电脑了。"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">👨‍💼</div>
+            <div>
+              <div class="testimonial-name">张明</div>
+              <div class="testimonial-role">产品经理 · 远程办公</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"用 Qclaw 自动发小红书，一个月涨了 3000 粉。以前花半天的事，现在微信说一句就行。"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">👩‍🎨</div>
+            <div>
+              <div class="testimonial-name">李婷</div>
+              <div class="testimonial-role">自媒体博主 · 社媒运营</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"搞科研最头疼整理文献，Qclaw 帮我自动检索、整理引用格式，写综述效率翻倍。"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">🧑‍🔬</div>
+            <div>
+              <div class="testimonial-name">王博</div>
+              <div class="testimonial-role">博士研究生 · 学术研究</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"完全不用配环境，下载就能用。Kimi 模型跑在本地，速度快还免费，良心产品。"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">👨‍💻</div>
+            <div>
+              <div class="testimonial-name">陈磊</div>
+              <div class="testimonial-role">独立开发者 · 日常效率</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"给客户做方案，让 Qclaw 帮我远程生成报表、截图、发邮件，一条微信搞定。"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">👩‍💼</div>
+            <div>
+              <div class="testimonial-name">周琳</div>
+              <div class="testimonial-role">销售总监 · 客户管理</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"数据全在本地，不经云端。作为安全从业者，这点让我很放心，终于不用担心隐私了。"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">🔒</div>
+            <div>
+              <div class="testimonial-name">赵峰</div>
+              <div class="testimonial-role">信息安全工程师 · 隐私保护</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"让 Qclaw 帮我在 GitHub 建仓、写代码、提 PR，一个周末搞了 3 个开源项目。"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">🚀</div>
+            <div>
+              <div class="testimonial-name">刘洋</div>
+              <div class="testimonial-role">全栈工程师 · 开源项目</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"每天自动收到天气穿搭建议，出门不纠结。还能帮我查快递、定闹钟，太贴心了。"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">👧</div>
+            <div>
+              <div class="testimonial-name">孙悦</div>
+              <div class="testimonial-role">大学生 · 生活助手</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bottom-cta">
+    <div class="cta-inner">
+      <img src="images/logo.png" alt="Logo" class="cta-logo">
+      <h2>开始使用 Qclaw</h2>
+      <p>随时随地，微信一下，Qclaw 帮你搞定一切</p>
+      <div class="cta-buttons">
+        <a href="#" class="btn-download btn-mac">
+          <i class="fa-brands fa-apple" style="font-size:18px;"></i> 下载 macOS 版
+        </a>
+        <a href="#" class="btn-download btn-win">
+          <i class="fa-brands fa-windows" style="font-size:18px;"></i> 下载 Windows 版
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Logo">
+        <img src="images/logo-text.png" alt="Logo Text" class="footer-text-logo">
+      </div>
+      <p class="footer-copyright">Copyright © 1998 - 2026 Your Company. All Rights Reserved.</p>
+      <div class="footer-links">
+        <a href="#">关于我们</a>
+        <span>|</span>
+        <a href="#">版权所有</a>
+        <span>|</span>
+        <a href="#">使用协议</a>
+        <span>|</span>
+        <a href="#">隐私条款</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
