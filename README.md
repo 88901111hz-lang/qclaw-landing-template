@@ -2,18 +2,18 @@
 
 > 现代化产品落地页模板 - 完整响应式设计（PC + 移动端）
 
-![Preview](preview.png)
+**在线预览**: https://88901111hz-lang.github.io/qclaw-landing-template/
 
 ## ✨ 特性
 
 - 🎨 **暗色主题** - 现代感十足的深色设计
 - 💎 **玻璃拟态** - Glassmorphism 效果，质感拉满
-- 🖱️ **自定义光标** - PC 端专属动态光标
-- ✨ **粒子背景** - 动态粒子 + 网格背景
+- ✨ **粒子背景** - 动态粒子 + 网格背景 + 浮动光球
 - 💬 **聊天气泡** - 模拟微信对话场景
 - 🔄 **无限滚动** - 用户评价自动滚动
 - 📱 **完整响应式** - PC / 平板 / 手机全覆盖
 - ⚡ **零依赖** - 纯 HTML/CSS/JS，无需框架
+- 🖱️ **系统光标** - 使用原生鼠标指针，体验自然
 
 ## 📁 目录结构
 
@@ -24,7 +24,7 @@ qclaw-landing-template/
 │   └── style.css       # 样式文件
 ├── js/
 │   └── main.js         # 交互脚本
-├── images/             # 图片资源（需自行添加）
+├── images/             # 图片资源
 │   ├── logo.png        # Logo 图标
 │   ├── logo-text.png   # 文字 Logo
 │   ├── tencent-logo.png # 品牌图标
@@ -37,7 +37,7 @@ qclaw-landing-template/
 ### 1. 克隆仓库
 
 ```bash
-git clone https://github.com/your-username/qclaw-landing-template.git
+git clone https://github.com/88901111hz-lang/qclaw-landing-template.git
 cd qclaw-landing-template
 ```
 
@@ -108,14 +108,12 @@ npx http-server -p 8080
 
 - **功能卡片**: 5 列网格
 - **场景演示**: 2 列网格
-- **自定义光标**: 显示
 - **导航链接**: 显示
 
 ### 平板 (600px - 1100px)
 
 - **功能卡片**: 2-3 列
 - **场景演示**: 1 列
-- **自定义光标**: 隐藏
 - **导航链接**: 隐藏
 
 ### 手机 (< 600px)
@@ -126,20 +124,21 @@ npx http-server -p 8080
 
 ## 🔧 核心功能
 
-### 1. 自定义光标 (PC)
-
-```javascript
-// 自动跟随鼠标
-// 悬停元素时放大
-cursorRing.classList.add('hovering');
-```
-
-### 2. 粒子背景
+### 1. 粒子背景
 
 ```javascript
 // 80 个随机粒子
 // 自动连线效果
 // 性能优化：requestAnimationFrame
+```
+
+### 2. 浮动光球
+
+```css
+/* 3个渐变光球 */
+.orb-1 { animation: orbFloat1 20s ease-in-out infinite; }
+.orb-2 { animation: orbFloat2 25s ease-in-out infinite; }
+.orb-3 { animation: orbFloat3 18s ease-in-out infinite; }
 ```
 
 ### 3. 滚动触发动画
@@ -156,6 +155,16 @@ cursorRing.classList.add('hovering');
 // 悬停时暂停动画
 ```
 
+### 5. 玻璃拟态卡片
+
+```css
+.feature-card {
+  background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+```
+
 ## 📝 修改内容
 
 ### 替换文字
@@ -170,10 +179,9 @@ cursorRing.classList.add('hovering');
 
 搜索 `href="#"` 替换为实际链接：
 
-- `#LINK_MAC_INTEL` → macOS 下载地址
-- `#LINK_WIN` → Windows 下载地址
-- `#LINK_TENCENT` → 官网链接
-- `#LINK_PRIVACY` → 隐私条款
+- 下载按钮链接
+- 导航锚点链接
+- 页脚链接
 
 ### 添加/删除功能卡片
 
